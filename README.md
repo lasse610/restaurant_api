@@ -24,7 +24,7 @@ Open up your browser and head over to:
 
 [http://localhost:3000/restaurants](http://localhost:3000/restaurants)
 
-You should see the list of restaurants. That confirms that you have set up everything successfully.
+You should see a list of restaurants. That confirms that you have set up everything successfully.
 
 You can make specific API requests by adding parameters:
 
