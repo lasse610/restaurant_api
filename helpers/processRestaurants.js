@@ -13,7 +13,7 @@ function createDictionary() {
     }
 
     dict = dictionary
-    console.log("dictionary created")
+    console.log("Dictionary Created")
 }
 
 function getDict() {

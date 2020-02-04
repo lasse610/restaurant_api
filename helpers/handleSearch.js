@@ -1,4 +1,4 @@
-const {getDict, getDictValues} = require('./processRestaurants');
+const {getDictValues} = require('./processRestaurants');
 const calculateDistance = require('./calculateDistance');
 
 
@@ -39,7 +39,7 @@ function handleSearch(req) {
     return filteredRestaurants;
 }
 
-// Checks if restauant's location and cliets location is under 3 km
+// Checks if restauant's location and client's location is under 3 km
 function testLocation(location,obj) {
     const distance = calculateDistance(location,obj.location)
     return distance <= 3
