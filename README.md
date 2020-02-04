@@ -4,6 +4,7 @@ Simple node API that displays restaurants based on user location and a query str
 ## Setup
 Make sure to follow all these steps exactly as explained below. Do not miss any steps or you won't be able to run this application.
 **Install Dependencies**
+
 Next, from the project folder, install the dependencies:
 
     npm i
