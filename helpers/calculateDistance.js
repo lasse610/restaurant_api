@@ -6,7 +6,6 @@ function calculateDistance(coords1,coords2) {
     const R = RadiusOfEarth;
     const lon1 = coords1[0];
     const lat1 = coords1[1];
-    
     const lon2 = coords2[0];
     const lat2 = coords2[1];
     

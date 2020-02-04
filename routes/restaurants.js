@@ -1,12 +1,15 @@
 const express = require('express');
 const router = express.Router();
-const createDictionary = require("../helpers/processRestaurants")
+const {getDictValues} = require('../helpers/processRestaurants')
+const handleSearch = require('../helpers/handleSearch')
 
-const dict = createDictionary()
-console.log('created dict')
+router.get('/', async (req, res) => {
+    res.send(getDictValues());
+})
 
-router.get("/", async (req, res) => {
-    res.send(Object.values(dict))
+router.get('/search', async(req,res) => {
+    const result = handleSearch(req)
+    res.send(result);
 })
 
 module.exports = router;

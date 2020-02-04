@@ -1,5 +1,5 @@
 const json = require('../data/restaurants.json');
-
+let dict;
 
 function createDictionary() {
     const restaurants = json.restaurants
@@ -12,7 +12,16 @@ function createDictionary() {
         dictionary[restaurants[i].name] = restaurants[i]
     }
 
-    return dictionary
+    dict = dictionary
+    console.log("dictionary created")
 }
 
-module.exports = createDictionary
+function getDict() {
+    return dict
+}
+
+function getDictValues() {
+    return Object.values(dict)
+}
+
+module.exports = {getDict,getDictValues, createDictionary}

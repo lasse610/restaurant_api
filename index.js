@@ -1,7 +1,9 @@
+const {createDictionary} = require('./helpers/processRestaurants')
 const restaurants = require('./routes/restaurants')
 const express = require('express');
 const app = express();
 
+createDictionary()
 app.use(express.json());
 app.use('/api/restaurants',restaurants)
 
