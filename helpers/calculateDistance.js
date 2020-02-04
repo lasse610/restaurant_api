@@ -14,8 +14,8 @@ function calculateDistance(coords1,coords2) {
     const dLat = degreesToRadians(lat2-lat1);
     const dLon = degreesToRadians(lon2-lon1);
 
-    const a = Math.pow(Math.sin(dLat/2),2)  +
-    Math.pow(Math.cos(degreesToRadians(lat1)),2) * 
+    const a = Math.sin(dLat/2) * Math.sin(dLat/2)  +
+    Math.cos(degreesToRadians(lat1)) * Math.cos(degreesToRadians(lat2)) * 
     Math.sin(dLon/2) * Math.sin(dLon/2)
     ;
 

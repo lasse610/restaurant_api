@@ -13,6 +13,7 @@
   "author": "Lasse Tammela",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.17.1",
     "node": "^13.7.0"
   },
   "devDependencies": {
