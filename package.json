@@ -4,7 +4,7 @@
   "description": "api for fetching restaurants in json format. Queries can have params for searching by name and location.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --watchAll --verbose"
   },
   "keywords": [
     "wolt",

@@ -38,7 +38,7 @@ describe('handleSearch', () => {
     })
 
     it("should return restaurants when no parameters are given", () => {
-        const result = handleSearch(mockQuery5)
+        const result = handleSearch(mockQuery6)
         expect(result.length).toBeGreaterThan(0)
     })
 })
