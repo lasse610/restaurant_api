@@ -20,7 +20,7 @@ All tests should pass.
 
     node index.js
 
-This will launch the Node server on port 3000. If that port is busy, you can set a different point by defining a PORT environment variable to a different port.
+This will launch the Node server on port 3000. If that port is busy, you can set a different point by changing the PORT variable in config/default.json.
 
 Open up your browser and head over to:
 
