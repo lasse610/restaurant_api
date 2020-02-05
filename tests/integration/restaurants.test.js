@@ -3,7 +3,7 @@ const request = require('supertest');
 let server;
 
 describe('/restaurants', ()=> {
-    beforeEach(() => { server = require('../../index');})
+    beforeEach(() => { server = require('../../index');});
     afterEach(async () => {
         await server.close();
     });
@@ -14,7 +14,7 @@ describe('/restaurants', ()=> {
 
             expect(result.status).toBe(200);
             expect(result.body.some(r => r.name ==='Social Burgerjoint Citycenter')).toBeTruthy();
-            expect(result.body.some(r => r.name ==="MorriSon's Helsinki")).toBeTruthy();
+            expect(result.body.some(r => r.name ==='MorriSon\'s Helsinki')).toBeTruthy();
         });
 
         it('should return restaurants if valid query is passed', async () => {

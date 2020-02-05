@@ -1,3 +1,4 @@
+const config = require('config');
 const {getDictValues} = require('./processRestaurants');
 const calculateDistance = require('./calculateDistance');
 
@@ -13,12 +14,12 @@ function handleSearch(req) {
     const restaurants = getDictValues();
     const {q,lat,lon} = req.query;
     //test wheter both lat and lon were given
-    const location = lat && lon ? [lat,lon] : false
+    const location = lat && lon ? [lat,lon] : false;
     // if search query is not given we are going to return all restaurants
     const filter = q ? q : '';
 
     // create a regexp of our search query
-    const reqExp = new RegExp(filter,'i')
+    const reqExp = new RegExp(filter,'i');
 
     const filteredRestaurants = restaurants.filter(obj => {
         let retVal = false;
@@ -35,19 +36,19 @@ function handleSearch(req) {
         } 
         //retVal is going to be false for restaurants whose name nor tags match the search query.
         return retVal;   
-    })
+    });
     return filteredRestaurants;
 }
 
 // Checks if restauant's location and client's location is under 3 km
 function testLocation(location,obj) {
     const distance = calculateDistance(location,obj.location);
-    return distance <= 3;
+    return distance <= config.get('searchRadius');
 }
 
 // Checks if restaurants name matches search query
 function testIfObjectContains(reqExp,obj){
-    return reqExp.test(obj.name) || reqExp.test(obj.tags.toString());
+    return (reqExp.test(obj.name) || reqExp.test(obj.tags.toString()) || reqExp.test(obj.description));
 }
 
 
