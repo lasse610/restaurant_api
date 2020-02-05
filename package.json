@@ -1,7 +1,7 @@
 {
   "name": "restaurant_api",
   "version": "1.0.0",
-  "description": "api for fetching restaurants in json format. Queries can have params for searching by name and location.",
+  "description": "API for fetching restaurants in json format. Queries can have params for searching by name and location.",
   "main": "index.js",
   "scripts": {
     "test": "jest --watchAll --verbose"
